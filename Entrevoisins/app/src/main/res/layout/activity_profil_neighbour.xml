@@ -5,11 +5,20 @@
     android:orientation="vertical"
     android:background="@color/dark_white">
 
-<!--photo de profil-->
+<!--vue photo de profil-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="291dp"
         android:padding="0dp">
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="375dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="1dp"
+            android:layout_marginTop="370dp"
+            android:background="?android:attr/listDivider"
+
+            />
         <!--mettre le lien pour l'avatar/photo de profil-->
         <ImageView
             android:id="@+id/profile_image"
@@ -51,14 +60,7 @@
 
             />
  <!-- comment ne pas prendre en compte le padding pour le diviseur ??-->
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="10000dp"
-            android:layout_height="1dp"
-            android:layout_below="@+id/profile_name"
-            android:background="?android:attr/listDivider"
 
-            />
 
         <ImageView
             android:id="@+id/vector_place"
@@ -73,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="adresse localisation"
-            android:layout_topRight="@id/vector_place"
+            android:layout_toRightOf="@id/vector_place"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="25dp"
@@ -92,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="adresse localisation"
-            android:layout_topRight="@id/vector_phone"
+            android:layout_toRightOf="@id/vector_phone"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="25dp"
             android:layout_below="@+id/place"
@@ -107,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="adresse réseau social"
-            android:layout_topRight="@id/vector_phone"
+            android:layout_toRightOf="@id/vector_phone"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/phone"
             />
@@ -131,7 +133,7 @@
 <!-- il faudra ajouter le lien vers le texte-->
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/a_propos_de_moi"
             android:text="Mettre le lien correspondant......................................................................."/>
 
