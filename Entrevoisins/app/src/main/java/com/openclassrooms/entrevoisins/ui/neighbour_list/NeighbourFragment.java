@@ -72,6 +72,7 @@ public class NeighbourFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        //Permet d'envoyer un message (communication découplé) dans le vide, sera récupéré si quelques chose le récupère. Permet de faire communiquer entre eux différents éléments
         EventBus.getDefault().register(this);
     }
 

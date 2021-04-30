@@ -35,10 +35,13 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 .inflate(R.layout.fragment_neighbour, parent, false);
         return new ViewHolder(view);
     }
-
+    //
+    //En gros cela remplace le findViewById permettant l'interaction avec les composant graphique
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+        //on recupère le model
         Neighbour neighbour = mNeighbours.get(position);
+        //on allimente le holder
         holder.mNeighbourName.setText(neighbour.getName());
         Glide.with(holder.mNeighbourAvatar.getContext())
                 .load(neighbour.getAvatarUrl())
@@ -59,6 +62,7 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        //@BindView = findViewByID();
         @BindView(R.id.item_list_avatar)
         public ImageView mNeighbourAvatar;
         @BindView(R.id.item_list_name)
